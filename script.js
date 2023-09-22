@@ -17,7 +17,7 @@ let restCountry= async()=>{
     <div class=" card p-2 my-4 mx-4 col-sm-3 container alert-dark col-md-2">
     <div class="text-center"><p class="bg-dark h4 text-white">${e.name.common}</p><div>
     <div class="t-img" ><img src="${e.flags.png}" class="card-img-top"></div>
-    <p>Capital : <span class="h5">${e.capital[0]}</span></p>
+    <p>Capital : <span class="h5">${e.capital && e.capital[0] ? e.capital[0] : 'N/A'}</span></p>
     <p>Region : <span class="h5">${e.region}</span></p>
     <p>Country code : <span class="h5">${e.cca3}</span></p>
     <button class="btn btn-primary" onclick="wget('${e.name.common}')" >Click for Weather</button>
